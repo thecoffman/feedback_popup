@@ -3,8 +3,10 @@ class FeedbackPopup::Message
   include ActiveModel::Validations
 
   attr_accessor :body
+  attr_accessor :request
 
   validates :body, :presence => true
+  validates :request, :presence => true
 
   def initialize(attributes = {})
     attributes.each do |key, value|
