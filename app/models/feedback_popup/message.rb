@@ -4,6 +4,8 @@ class FeedbackPopup::Message
 
   attr_accessor :body
   attr_accessor :request
+  attr_accessor :name
+  attr_accessor :email
 
   validates :body, :presence => true
   validates :request, :presence => true

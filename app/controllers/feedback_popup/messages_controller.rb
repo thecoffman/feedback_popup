@@ -21,7 +21,7 @@ class FeedbackPopup::MessagesController < ApplicationController
   private
 
   def message_params
-    params[:feedback_popup_message].slice(:body, :request)
+    params[:feedback_popup_message].slice(:body, :request, :name, :email)
   end
 
 end
