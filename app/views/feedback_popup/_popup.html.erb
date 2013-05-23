@@ -6,6 +6,7 @@
       <%= f.text_field :email, placeholder: 'Email' %>
       <%= f.text_area :body, placeholder: 'Message' %>
       <%= f.hidden_field :request, value: params %>
+      <%= recaptcha_tags %>
       <%= f.submit t('feedback_popup.send_button') %>
     <% end %>
     <div class="message"></div>

@@ -16,6 +16,8 @@ gem "jquery-rails"
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+gem 'recaptcha', require: 'recaptcha/rails'
+
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'

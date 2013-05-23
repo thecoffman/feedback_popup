@@ -1,7 +1,8 @@
 class FeedbackPopup::MessagesController < ApplicationController
   def create
     message = FeedbackPopup::Message.new(message_params)
-    if message.deliver
+    if verify_recaptcha(model: message, message: 'Failed Captcha Verification') &&
+        message.deliver
       @success_message = t('feedback_popup.message_sent')
     else
       @error_message = message.errors.full_messages.join("; ")
